@@ -1,0 +1,24 @@
+<div class="basket">
+  <h1>Моя корзина</h1>
+  <% flash.each do |key, message| %>
+    <p class="<%= key %>"><%= message %></p>
+  <% end %>
+  <h3>Количество товаров в корзине: <%= @items.count %></h3>
+  <h3>
+    Общая сумма с учетом доставки: <%= session[:basket_total]%>
+    (<%= session[:basket_total].to_i >= 3000 ? " Доставка бесплатная" : "Доставка 300$"%>)
+  </h3>
+  <p>*Стоимость доставки свыше 3000$ бесплатная</p>
+  <div class="basket__list">
+    <% @items.each do |basket_item| %>
+      <div class="basket__item col-sm-4">
+        <p><%= image_tag(basket_item.item.image_url, class: 'item__image') %></p>
+        <p><%= basket_item.item.title.capitalize %></p>
+        <p><%= number_to_currency(basket_item.item.price) %></p>
+        <%= link_to 'Delete',basket_path(basket_item),
+                             method: :delete,
+                             data: { confirm: 'Are you sure?' } %>
+        </div>
+    <% end %>
+  </div>
+</div>

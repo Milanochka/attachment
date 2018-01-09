@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Attachment</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="<%= controller.controller_name %>">
+    <div class="header">
+      <%= link_to root_path do%>
+        <%= image_tag("logo.png")%>
+      <%end%>
+      <h1 class="caption"><%=@page_title || "Книжный магазин"%></h1>
+      <span><%=link_to "Ссылка на корзину", basket_index_path  %></span>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

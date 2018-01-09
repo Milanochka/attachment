@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+<% @items.each do |item| %>
+  <div class="entry">
+    <div class="col-md-2 col-xs-12">
+      <%= image_tag(item.image_url, class: 'item__image') %>
+    </div>
+    <div class="col-md-10 col-xs-12">
+      <div class="entry__text">
+        <p class="entry__text-title"><%= item.title.capitalize %></p>
+        <p class="entry__text-description"><%= truncate(item.description) %></p>
+        <p class="entry__text-price"><%= number_to_currency(item.price) %></p>
+        <%= button_to "Добавить в корзину", add_item_path(item_id: item) %>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+<% end %>
+

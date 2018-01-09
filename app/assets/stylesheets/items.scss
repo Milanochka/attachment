@@ -1,0 +1,54 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.caption{
+    margin: 0;
+    padding-bottom: 20px;
+    font: 35px sans-serif;
+    color: #d4c3c3;
+}
+
+.entry{
+  padding: 20px;
+  min-height: 100px;
+  min-width: 300px;
+  margin: 20px 0 20px;
+  border: 2px solid #e0d7d7;
+  box-shadow: 0 0 15px rgb(255, 147, 147);
+  border-radius: 10px;
+
+  // overflow: hidden;
+  @media all and (max-width: 992px ) {
+    width: 100%;
+    margin: 20px auto;
+    // min-width: 100%;
+    max-width: 400px;
+  }
+  img{
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+
+  }
+  &__text{
+    @media all and (max-width: 992px ) {
+      text-align: center;
+    }
+    &-title{
+      font-size: 30px;
+      word-wrap: break-word;
+      line-height: normal;
+    }
+    &-description{
+      font-size: 15px;
+    }
+    &-price{
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+
+  .price{
+    color: #344a61;
+  }
+}

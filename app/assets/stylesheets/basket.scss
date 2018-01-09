@@ -1,0 +1,19 @@
+// Place all the styles related to the Basket controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.basket{
+  &__item{
+    text-align: center;
+    border: 2px solid #e0d7d7;
+    box-shadow: 0 0 15px rgb(255, 147, 147);
+    border-radius: 10px;
+    max-width: 300px;
+    margin-bottom: 15px;
+    padding: 5px;
+    @media all and (max-width: 768px){
+      margin: 10px auto;
+    }
+  }
+}
