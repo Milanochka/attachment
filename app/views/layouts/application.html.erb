@@ -14,9 +14,12 @@
         <%= image_tag("logo.png")%>
       <%end%>
       <h1 class="caption"><%=@page_title || "Книжный магазин"%></h1>
-      <span><%=link_to "Ссылка на корзину", basket_index_path  %></span>
+      <span><%=link_to "Корзина", basket_index_path, class: "header__basket"  %></span>
     </div>
     <div class="container">
+      <% flash.each do |key, message| %>
+        <p class="<%= key %>"><%= message %></p>
+      <% end %>
       <%= yield %>
     </div>
   </body>

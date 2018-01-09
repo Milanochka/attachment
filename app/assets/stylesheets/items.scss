@@ -16,7 +16,11 @@
   border: 2px solid #e0d7d7;
   box-shadow: 0 0 15px rgb(255, 147, 147);
   border-radius: 10px;
-
+  transition: all 0.3s ease-out 0s;
+  &:hover{
+    box-shadow: 0 0 15px rgb(253, 95, 95);
+    transition: all 0.3s ease-out 0s;
+  }
   // overflow: hidden;
   @media all and (max-width: 992px ) {
     width: 100%;
@@ -45,6 +49,7 @@
     &-price{
       font-weight: bold;
       font-size: 15px;
+
     }
   }
 

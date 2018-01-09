@@ -12,8 +12,18 @@
     max-width: 300px;
     margin-bottom: 15px;
     padding: 5px;
+    height: 260px;
     @media all and (max-width: 768px){
       margin: 10px auto;
     }
+  }
+  &__img{
+    height: 130px;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+  li{
+    list-style-type: none;
   }
 }

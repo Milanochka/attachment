@@ -60,8 +60,8 @@ class BasketController < ApplicationController
     def check_for_basket_limit
       if @basket.basket_items.count >= 10
         redirect_to items_path
+        flash[:alert] = 'Слишком много товаров'
         # binding.pry
-        # basket.error_messages.add("Слишком много товаров в корзине")
       end
     end
 

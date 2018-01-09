@@ -22,6 +22,14 @@ p, ol, ul, td {
     float: left;
     margin-right: 20px;
   }
+  &__basket{
+    color: #27282D;
+    font-size: 16px;
+    background: #ffcd34;
+    box-shadow: 1px 1px 7px #27282D;
+    padding: 5px 10px;
+    border-radius: 12px;
+  }
 }
 .main{
   margin: 50px;
@@ -34,7 +42,7 @@ input[type="submit"]{
   padding: .8em 1em calc(.8em + 3px);
   border-radius: 3px;
   background: #523131;
-  box-shadow: 0 -3px rgb(53,167,110) inset;
+  box-shadow: 0 -3px #9e8181;
   transition: 0.2s;
   :hover {
     background: rgb(53, 167, 110);
@@ -42,5 +50,15 @@ input[type="submit"]{
   :active {
     background: rgb(33,147,90);
     box-shadow: 0 3px rgb(33,147,90) inset;
+  }
+}
+
+a{
+  text-decoration: none;
+  &:active{
+    text-decoration: none;
+  }
+  &:hover{
+    text-decoration: none;
   }
 }
