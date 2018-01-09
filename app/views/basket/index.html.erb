@@ -15,7 +15,7 @@
           <p><%= number_to_currency(basket_item.item.price) %></p>
           <%= link_to 'Удалить из корзины',basket_path(basket_item),
                                method: :delete,
-                               data: { confirm: 'Are you sure?' } %>
+                               data: { confirm: 'Вы уверены?' } %>
         </div>
       </div>
     <% end %>
