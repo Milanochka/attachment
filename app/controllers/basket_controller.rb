@@ -61,7 +61,6 @@ class BasketController < ApplicationController
       if @basket.basket_items.count >= 10
         redirect_to items_path
         flash[:alert] = 'Слишком много товаров'
-        # binding.pry
       end
     end
 
